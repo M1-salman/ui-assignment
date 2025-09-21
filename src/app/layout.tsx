@@ -31,7 +31,7 @@ export default function RootLayout({
           lexendDeca.variable,
           'font-inter',
           'bg-text-hint',
-          'text-black'
+          'text-[#1F1F1F]'
         )}
       >
         <AppRouterCacheProvider>

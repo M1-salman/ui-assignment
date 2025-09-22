@@ -12,7 +12,7 @@ export default function Home() {
 
   const goDemo = () => router.push('/demo');
   const goActionFlow = () => router.push('/action-flow');
-  const goPlayground = () => router.push('/playground'); // students write code here
+  const goSideNav = () => router.push('/side-navigation'); // students write code here
 
   // Keyboard shortcuts: D (demo), A (action flow), S (student playground)
   useEffect(() => {
@@ -21,7 +21,7 @@ export default function Home() {
       const k = e.key.toLowerCase();
       if (k === 'd') goDemo();
       if (k === 'a') goActionFlow();
-      if (k === 's') goPlayground();
+      if (k === 's') goSideNav();
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
@@ -145,12 +145,13 @@ export default function Home() {
               </Stack>
             </Paper>
           </Grid>
+          
         </Grid>
 
         {/* Helper Row */}
         <Box sx={{ mt: 6, textAlign: 'center' }}>
           <Typography variant="body2" color="text.secondary">
-            Shortcuts: Press <b>D</b> for Demo, <b>A</b> for Action Flow
+            Shortcuts:Press <b>S</b> for Side Navigation, <b>A</b> for Action Flow, <b>D</b> for Demo
           </Typography>
         </Box>
 

@@ -1,12 +1,10 @@
 import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import FormLabel from '@mui/material/FormLabel';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import React from 'react';
 
 interface RadioButtonProps {
-  label: string;
   name: string;
   options: { value: string; label: string }[];
   value: string;
@@ -14,7 +12,6 @@ interface RadioButtonProps {
 }
 
 export const RadioButton: React.FC<RadioButtonProps> = ({
-  label,
   name,
   options,
   value,
@@ -22,12 +19,6 @@ export const RadioButton: React.FC<RadioButtonProps> = ({
 }) => {
   return (
     <FormControl>
-      <FormLabel
-        id={`${name}-radio-buttons-group-label`}
-        sx={{ color: 'var(--text-primary) !important' }}
-      >
-        {label}
-      </FormLabel>
       <RadioGroup
         aria-labelledby={`${name}-radio-buttons-group-label`}
         name={name}

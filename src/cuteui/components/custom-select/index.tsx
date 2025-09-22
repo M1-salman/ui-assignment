@@ -165,7 +165,7 @@ export const CustomSelect: React.FC<CustomSelectProps> = (props) => {
             alignItems: 'center',
           },
           '& .MuiOutlinedInput-notchedOutline': {
-            borderColor: hasAny ? '#2c2c2c' : 'var(--action-active)',
+            borderColor: hasAny ? '#BBBBBB' : 'var(--action-active)',
             borderWidth: '1px !important',
           },
           '&:hover .MuiOutlinedInput-notchedOutline': {

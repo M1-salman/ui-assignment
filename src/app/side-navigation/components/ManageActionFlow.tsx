@@ -7,6 +7,7 @@ import BorderColorIcon from '@mui/icons-material/BorderColor';
 import Image from 'next/image';
 import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const actionList = [
   {
@@ -34,26 +35,28 @@ const actionList = [
 const ManageActionFlow = () => {
   const [searchValue, setSearchValue] = useState('');
 
+  const router = useRouter();
+
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);
   };
   return (
     <div className="w-full">
       <div className="flex items-center justify-between h-16 border-b border-[#F0F0F0] px-6">
-        <div className="flex items-center">
-          <div className="flex items-center justify-center w-8 h-8 rounded-md mr-2 bg-[#E2F3EF]">
+        <div className="flex items-center gap-x-2 cursor-pointer" onClick={() => router.push('/action-flow')}>
+          <div className="flex items-center justify-center w-8 h-8 rounded-md bg-[#E2F3EF]">
             <AccountTreeIcon />
           </div>
           <span className="font-semibold">Action flow</span>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center gap-x-8">
           <NotificationsNoneIcon />
           <Image
             src={'/profile-Image.png'}
             width={32}
             height={32}
             alt="profile image"
-            className="rounded-full ml-8"
+            className="rounded-full"
           />
         </div>
       </div>
@@ -78,7 +81,7 @@ const ManageActionFlow = () => {
       {actionList.map((item) => (
         <div
           key={item.id}
-          className="flex items-center justify-between h-12 border-b border-[#DEDEDE] mx-8 mt-2 pl-4 pr-16"
+          className="flex items-center justify-between min-h-12 border-b border-[#DEDEDE] mx-8 mt-2 pl-4 pr-16"
         >
           <span className="inline-block w-56 font-medium">{item.actionName}</span>
           <span className="inline-block w-56">

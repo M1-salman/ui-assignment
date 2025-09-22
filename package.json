@@ -44,6 +44,7 @@
     "@rjsf/validator-ajv8": "^5.20.1",
     "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/forms": "^0.5.7",
+    "@xyflow/react": "^12.8.5",
     "autoprefixer": "^10.4.17",
     "axios": "^1.6.7",
     "classnames": "^2.5.1",
